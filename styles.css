@@ -1,0 +1,357 @@
+body {
+    margin: 0;
+    font-family: Garamond, serif;
+    overflow-x: hidden; 
+    scroll-behavior: smooth; 
+}
+
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+}
+
+#myVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transform: translate(-50%, -50%); 
+    z-index: -1; 
+}
+
+.engraving-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%; 
+    opacity: 0.2;
+    z-index: -1; 
+}
+
+.navbar {
+    background-color: rgba(115, 110, 110, 0.33); 
+    color: #fff;
+    font-family: Garamond, serif;
+    padding: 15px;
+    position: fixed; 
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+    box-sizing: border-box; 
+}
+
+.navbar h1{
+    text-align: center;
+    margin: 0 auto; 
+    display: block;   
+    font-size: 2em; 
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 20px; 
+    box-sizing: border-box; 
+}
+
+
+.logo img {
+    height: 65px;
+    width: 65px; 
+    border-radius: 50%; 
+    margin-right: 15px; 
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-left: auto; 
+    font-size: 18px;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+    border-radius: 15%;
+}
+
+.nav-links a:hover {
+    color: #b8793b;
+}
+
+.info {
+    text-align: center; 
+    margin-top: 100px; 
+    z-index: 2; 
+    position: relative;
+}
+
+.info h1 {
+    color: #fff;
+    font-size: 3em; 
+}
+
+.registration-info, .contact-info {
+    margin-bottom: 200px;
+    color: #fff;
+    font-size: 1.2em; 
+    padding: 20px;
+    max-width: 800px; 
+    margin: 100px auto; 
+    line-height: 1.5;
+    text-align: center;
+}
+
+.registration-info h2 {
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.918);
+    text-wrap:auto;
+}
+
+.card-group {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: nowrap; 
+    padding: 20px; 
+    background-color: transparent;
+    overflow-x: auto; 
+    scrollbar-width: none; 
+    -ms-overflow-style: none;  
+}
+
+.card {
+    box-shadow: 5px 7px 26px 6px rgba(0, 0, 0, 0.547);
+    width: 23%; 
+    transition: 0.3s;
+    background-color: transparent; 
+    margin: 10px; 
+    flex-shrink: 0; 
+}
+
+.cardcontainer {
+    padding: 10px 16px; 
+    background-color: rgba(165, 162, 162, 0.2); 
+    border-radius: 5px;
+    color: #fff; 
+}
+
+.card-img {
+    width: 100%; 
+    border-radius: 5px 5px 0 0; 
+}
+
+.nav-links .instagram-logo img {
+    width: 32px; 
+    height: 32px;
+    border-radius: 20px;
+}
+
+/* Fix text alignment and spacing */
+h1, h2, h3 {
+    margin: 20px 0; 
+    padding: 0;
+    text-align: center; 
+    line-height: 1.5; 
+}
+
+h1, h2, h3, p {
+    text-decoration: none; 
+}
+
+.navbar h1 {
+    font-family: "Bungee Spice", sans-serif;
+    font-weight: 400;
+    text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.82);
+}
+
+.contact-info h2 {
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.contact-info {
+    text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.82);
+}
+
+/* Button Styles */
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 10px;
+    color: rgb(21, 17, 17);
+    text-transform: uppercase;
+    cursor: pointer;
+    border: solid 2px black;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 17px;
+    background-color: hsl(49deg 98% 60%);
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+  
+button:active {
+    transform: scale(0.9);
+    transition: all 100ms ease;
+}
+  
+button svg {
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+  
+.play {
+    transition: all 0.5s ease;
+    transition-delay: 300ms;
+}
+  
+button:hover svg {
+    transform: scale(3) translate(50%);
+}
+  
+.now {
+    position: absolute;
+    left: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+  
+button:hover .now {
+    transform: translateX(10px);
+    transition-delay: 300ms;
+}
+  
+button:hover .play {
+    transform: translateX(200%);
+    transition-delay: 300ms;
+}
+
+/* Rounded button with expanding text */
+.Btn {
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .4s;
+    cursor: pointer;
+    position: relative;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    overflow: hidden;
+}
+  
+.svgIcon {
+    transition-duration: .3s;
+}
+  
+.svgIcon path {
+    fill: white;
+}
+  
+.text {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    width: 120px;
+    font-weight: 600;
+    opacity: 0;
+    transition-duration: .4s;
+    font-size: 12px;
+}
+  
+.Btn:hover {
+    width: 110px;
+    transition-duration: .4s;
+    border-radius: 30px;
+}
+  
+.Btn:hover .text {
+    opacity: 1;
+    transition-duration: .4s;
+}
+  
+.Btn:hover .svgIcon {
+    opacity: 0;
+    transition-duration: .3s;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: row;
+        font-size: 12px;
+    }
+
+    .container h1 {
+        font-size: 16px;
+    }
+
+    .nav-links li {
+        margin-left: 10px;
+    }
+
+    .logo img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .card {
+        width: 45%; 
+    }
+
+    .info h1 {
+        font-size: 2em; 
+    }
+
+    .registration-info h2, .contact-info h2 {
+        font-size: 1.5em;
+    }
+
+    .registration-info p, .contact-info p {
+        font-size: 1em; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .logo img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        font-size: 14px;
+    }
+
+    .nav-links li {
+        margin: 5px 0;
+    }
+}
